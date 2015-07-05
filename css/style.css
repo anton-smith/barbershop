@@ -1,0 +1,1119 @@
+/*++CSS-файл для проекта БАРБЕРШОП ++++++++++++++++++++++++++++++++++++++++++*/
+/*++Задание по разделу №5 Декоративные элементы. Редакция от 24.06.2015 +++++*/
+/*++Студент: Сергей Грузинцев +++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: url("ptn57f.eot");
+    src: 
+         local("PT Sans Narrow"),
+         url("ptn57f.eot?#iefix") format("embedded-opentype"),
+         url("ptn57f.woff") format("woff"),
+         url("ptn57f.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: url("ptn77f.eot");
+    src: 
+         local("PT Sans Narrow"),
+         url("ptn77f.eot?#iefix") format("embedded-opentype"),
+         url("ptn77f.woff") format("woff"),
+         url("ptn77f.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*==ОБЩИЕ ПРАВИЛА ДЛЯ ВСЕХ И ДЛЯ ГЛАВНОЙ СТРАНИЦЫ============================*/
+body {
+  min-width: 960px;
+  padding: 0;
+  
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.index {
+  background: #111 url("../img/body-bg.jpg") no-repeat center top;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 137px;
+  padding: 9px 0 10px 3px;
+  margin-right: 17px;
+  
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  
+  color: #fff;
+  background: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background: #663d15;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.btn:disabled:hover {
+  background: #000;
+}
+
+/*==ШАПКА====================================================================*/
+.main-header {
+  margin-bottom: 57px;
+  background: #000;
+}
+
+/*~~~~~~~~~~~~~~~~~Общие свойства для ссылок~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-header a {
+  position: relative;
+  display: block;
+  padding: 23px 21px 25px 21px;
+  
+  font-size: 16px;
+  color: #fff;
+}
+
+.main-header a:hover {
+  background: #242424;
+}
+
+.main-header .active a:hover {
+  background: none;
+}
+
+.main-header .active a::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 22px;
+  bottom: 0;
+  
+  height: 5px;
+  background: #fff;
+}
+
+/*~~~~~~~~~~~~~~~~~Главное меню~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-navigation {
+  float: left;
+  width: 780px;
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*~~~~~~~~~~~~~~~~~Кнопка Вход~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.user-block {
+  float: right;
+  max-width: 140px;
+}
+
+.user-block a {
+  padding-left: 50px;
+}
+
+.user-block a::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 17px;
+  width: 18px;
+  
+  height: 18px;
+  background: transparent url("../img/sprite.png") no-repeat 0 0;
+  opacity: .3;
+}
+
+.user-block a:hover::before {
+  opacity: 1;
+}
+/*===========================================================================*/
+
+
+/*==ОСНОВНОЙ РАЗДЕЛ==========================================================*/
+/*~~~~~~~~~~~~~~~~~Логотип~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.logo {
+  width: 378px;
+  height: 204px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~Ряд преимуществ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.features-row {
+  padding: 0 10px;
+  margin-bottom: 65px;
+}
+
+.features-item {
+  float: left;
+  width: 280px;
+  margin-right: 40px;
+  
+  text-align: center;
+  color: #f7f4f1;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.features-title {
+  position: relative;
+  margin-bottom: 69px;
+  
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.features-title::after {
+  content: "";
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  transform: rotate(45deg);
+  background: #f7f4f1;
+}
+
+/*~~~~~~~БЛОК КОНТЕНТА~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.index-content {
+  padding: 45px 78px 55px 80px;
+  margin-bottom: 34px;
+  
+  background: 
+    url("../img/index-content-shadow.png") no-repeat center,
+    #f8f3f0 url("../img/pattern-white.jpg");
+}
+
+.index-content:last-child {
+  padding-bottom: 61px;
+  margin-bottom: 0;
+}
+
+.content-column-left {
+  float: left;
+  width: 370px;
+}
+
+.content-column-right {
+  float: right;
+  width: 300px;
+}
+
+/*~~~~~~~~~~~~~~~~~Новости~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.content-column-title {
+  margin:0;
+  margin-bottom: 24px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.content-column-left li{
+  margin-bottom: 24px;
+}
+
+.content-column-left time{
+  display: block;
+  font-family: "PT Sans Narrow", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.content-column-left ul{
+  width: 310px;
+  margin-bottom: 30px;
+}
+
+/*~~~~~~~~~~~~~~~~~Фотогалерея~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.gallery {
+  position: relative;
+  right: 2px;
+  height: 258px;
+  margin-top: 31px
+}
+
+.gallery-content {
+  height: 164px;
+  margin: 0;
+  border: 7px solid #fff;
+  background: #ccc;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.gallery .btn {
+  position: absolute;
+  bottom: 0;
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-prev {
+  left: 0;
+}
+
+.gallery-next {
+  right: 0;
+}
+
+/*~~~~~~~~~~~~~~~~~Контактная информация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-contacts p {
+  margin-bottom: 24px;
+}
+
+.main-contacts p:last-of-type{
+  margin-bottom: 46px;
+}
+
+/*~~~~~~~~~~~~~~~~~Форма Записаться~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.appointment-form p {
+  margin-bottom: 27px;
+}
+
+.appointment-form form {
+  position: relative;
+  right: 2px;
+}
+
+.appointment-form input {
+  float: left;
+  width: 106px;
+  padding: 7px 15px 8px 15px;
+  margin-right: 20px;
+  margin-bottom: 17px;
+  
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  color: #000;
+  background: #f9f6f3;
+  border: 2px solid #000;
+}
+
+.appointment-form input:focus {
+  border: 2px solid #663d15;
+  outline: none;
+}
+
+.appointment-form input:nth-child(2n) {
+  margin-right: 0;
+}
+
+.appointment-form .btn {
+  clear: both;
+  width: 100%;
+  margin-top: 17px;
+}
+/*===========================================================================*/
+
+
+/*==ПОДВАЛ===================================================================*/
+.main-footer {
+  padding-top: 56px;
+  padding-bottom: 52px;
+  margin-top: 64px;
+  color: #fff;
+  background: #252525 url("../img/pattern-black.jpg");
+}
+
+.main-footer p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/*~~~~~~~~~~~~~~~~~Контакты~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer-contacts {
+  float: left;
+  width: 320px;
+  margin-right: 78px;
+}
+
+.footer-contacts p {
+  margin-bottom: 0;
+  text-align: left;
+  font-style: normal;
+}
+
+.footer-contacts a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
+/*~~~~~~~~~~~~~~~~~Социальные сети~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer-social {
+  float: left;
+  font-size: 0;
+  text-align: center;
+}
+
+.footer-social p {
+  font-size: 14px;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
+  
+  width: 43px;
+  height: 43px;
+  margin: 0 3px;
+  
+  text-decoration: none;
+  background: #000 url("../img/icon-social-sprite.png") no-repeat;
+}
+
+.social-btn:hover {
+  background-color: #fff;
+}
+
+.social-btn-fb {
+  background-position: -43px;
+}
+
+.social-btn-inst {
+  background-position: -86px;
+}
+
+.social-btn-vk:hover {
+  background-position: -129px;
+}
+
+.social-btn-fb:hover {
+  background-position: -172px;
+}
+
+.social-btn-inst:hover {
+  background-position: -215px;
+}
+
+/*~~~~~~~~~~~~~~~~~Копирайт~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer-copyright {
+  float: right;
+  max-width: 320px;
+}
+
+.footer-copyright p {
+  text-align: center;
+}
+
+.footer-copyright .btn {
+  margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+  color: #000;
+  background: #fff;
+}
+/*===========================================================================*/
+
+
+/*==СТРАНИЦА КАТАЛОГА========================================================*/
+.inner-page {
+  background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.inner-page .main-footer {
+  margin-top: 47px;
+  background-image: url("../img/footer-shadow.png");
+  background-repeat: repeat-x;
+  background-position: center top;
+/*linear-gradient(rgba(0,0,0,.75), transparent 25px),*/
+}
+
+/*~~~~~~~~~~~~~~~~~Заголовок страницы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.inner-page .main-title {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+/*~~~~~~~~~~~~~~~~~Меню Хлебные крошки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.inner-page-title {
+  margin-bottom: 55px;
+}
+
+.breadcrumbs {
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  
+  padding-right: 42px;
+  font-size: 14px;
+  color: #aba9a7;
+  cursor: default;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  
+  right: 17px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs a {
+  color: #000;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/*~~~~~~~~~~~~~~~~~Фильтр по товарам~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.catalog-selector {
+  float: left;
+  width: 200px;
+}
+
+.catalog-selector .selector-title {
+  margin-top: -2px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.catalog-selector ul {
+  margin-bottom: 53px;
+}
+
+.catalog-selector input {
+  display: none;
+}
+
+.catalog-selector label {
+  position: relative;
+  display: block;
+  padding-left: 43px;
+  margin-bottom: 20px;
+  line-height: 18px;
+}
+
+.catalog-selector label:hover {
+  color: #663d15;
+  cursor: pointer
+}
+
+.catalog-selector label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+}
+
+.catalog-selector input[type="checkbox"]+label::before {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+}
+
+.catalog-selector input[type="checkbox"]:checked+label::before {
+  background: transparent url("../img/sprite.png") no-repeat 2px -127px;
+}
+
+.catalog-selector input[type="radio"]+label::before {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  border-radius: 50%
+}
+
+.catalog-selector input[type="radio"]:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.catalog-selector .btn {
+  width: 112px;
+}
+
+/*~~~~~~~~~~~~~~~~~Список товаров~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.catalog-showcase {
+  float: right;
+  width: 700px;
+  font-size: 0;
+}
+
+.showcase-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+  
+  font-size: 14px;
+  line-height: 18px;
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgba(0,1,1,.2);
+}
+
+.showcase-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.showcase-item img {
+  margin-bottom: 10px;
+  background: #ccc;
+}
+
+.showcase-item span {
+  display: block;
+  padding: 0 17px 0 16px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+.showcase-item a:hover span {
+  text-decoration: underline;
+}
+
+.showcase-item-group {
+  text-transform: none;
+}
+
+.showcase-item-price {
+  margin: 13px 17px 17px 17px;
+  line-height: 43px;
+  text-align: center;
+  background: #e5e5e5;
+}
+
+.showcase-item-price .btn {
+  float: right;
+  width: 75px;
+  margin-right: 0;
+}
+
+/*~~~~~~~~~~~~~~~~~Переключатель страниц~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.showcase-paginator {
+  font-size: 0;
+}
+
+.showcase-paginator .btn {
+  width: 43px;
+  padding-left: 0;
+  margin-right: 7px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.showcase-paginator .active {
+  color: #000;
+  background: #fff;
+}
+/*===========================================================================*/
+
+
+/*==СТРАНИЦА ТОВАРА==========================================================*/
+.catalog-item .main-footer {
+  margin-top: 36px;
+}
+/*~~~~~~~~~~~~~~~~~Колонка изображений товара~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.item-gallery {
+  float: left;
+  width: 460px;
+/*  margin-bottom: -2px;*/
+  font-size: 0;
+}
+
+.item-gallery-image img{
+  display: block;
+  margin-bottom: 20px;
+  background: #ccc;
+  box-shadow: 0 0 15px 0 rgba(0,1,1,.2);
+}
+
+.item-gallery-preview img{
+  display: inline-block;
+  width: 140px;
+  margin-right: 20px;
+  background: #ccc;
+  box-shadow: 0 0 15px 0 rgba(0,1,1,.2);
+}
+
+.item-gallery-preview:last-child img{
+  margin-right: 0;
+}
+
+/*~~~~~~~~~~~~~~~~~Колонка описания товара~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.item-info {
+  float: right;
+  width: 380px;
+  margin-right: 10px;
+
+}
+
+.info-stock {
+  padding-top: 18px;
+  margin-bottom: 29px;
+}
+
+.info-stock-number {
+  float: right;
+  text-align: right;
+  color: #aeaeae;
+}
+
+.item-info p {
+  margin-bottom: 36px;
+}
+
+.info-price {
+  width: 187px;
+  margin-bottom: 56px;
+  line-height: 43px;
+  text-align: center;
+  background: #e5e5e5;
+}
+
+.item-info .btn {
+  float: right;
+  width: 75px;
+  margin-right: 0;
+}
+
+.info-title {
+  font-size: 24px;
+  line-height: 42px;
+  margin-bottom: 21px;
+}
+
+.info-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.info-list li::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 3px;
+  top: 9px;
+  background: #000;
+  transform: rotate(45deg);
+}
+/*===========================================================================*/
+
+
+/*==ПРАЙС-ЛИСТ===============================================================*/
+.price .main-header {
+  margin-bottom: 60px;
+}
+
+.price .inner-page-title {
+  margin-bottom: 45px;
+}
+
+.inner-content {
+  margin-bottom: 74px;
+}
+
+/*~~~~~~~~~~~~~~~~~Общие свойства для текстовой страницы~~~~~~~~~~~~~~~~~~~~~*/
+.inner-content h2 {
+  margin-top: 55px;
+  margin-bottom: 25px;
+  
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+  padding: 3px 0;
+}
+
+p.short-text {
+  padding-right: 70px;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 0 17px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  border: 2px solid #000;
+}
+
+/*~~~~~~~~~~~~~~~~~Большой заголовок~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.big-heading {
+  margin-top: 45px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.big-heading h2 {
+  position: relative;
+  z-index: 2;
+  display: inline;
+  margin: 0;
+  padding: 0 25px;
+  font-size: 48px;
+  line-height: 48px;
+  background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.big-heading::after {
+  content: "";
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  display: block;
+  border-bottom: 2px solid #000;
+  
+}
+
+
+/*~~~~~~~~~~~~~~~~~Нестандартные список~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 7px;
+  height: 7px;
+  background: #000;
+  transform: rotate(45deg);
+}
+
+/*~~~~~~~~~~~~~~~~~Нестандартная таблица~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.prices-table {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.prices-table td {
+  width: 50%;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+/*~~~~~~~~~~~~~~~~~Колонки для контента~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.inner-content-columns {
+  margin: 55px 0;
+}
+
+.inner-content-column-left {
+  float: left;
+  width: 460px;
+}
+
+.inner-content-column-right {
+  float: right;
+  width: 460px;
+}
+
+.inner-content-column-left  *:first-child,
+.inner-content-column-right *:first-child {
+  margin-top: 0;
+}
+
+.inner-content-column-left  *:last-child,
+.inner-content-column-right *:last-child {
+  margin-bottom: 0; 
+}
+
+/*==ВСПЛЫВАЮЩИЕ ЭЛЕМЕНТЫ=====================================================*/
+.modal-content {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 50%;
+  
+  width: 300px;
+  margin-top: 120px;
+  margin-left: -230px;
+  padding: 45px 80px;
+  padding-bottom: 52px;
+  
+  color: #000;
+  background: #f8f3f0 url("../img/pattern-white.jpg");
+  box-shadow: 0 30px 50px rgba(0,0,0,.7);
+}
+
+.modal-content-map {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  
+  width: 766px;
+  height: 560px;
+  margin-top: -287px;
+  margin-left: -390px;
+  border: 7px solid #fff;
+  
+  background: #e9e5dc url("../img/map.png");
+  box-shadow: 0 30px 50px rgba(0,0,0,.7);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-content-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -43px;
+  
+  width: 40px;
+  height: 40px;
+  
+  font-size: 0;
+  cursor: pointer;
+  background: transparent url("../img/sprite.png") no-repeat 9px -164px;
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 16px;
+  
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 51px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 9px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 40px;
+  
+  font-family: "PT Sans Narrow", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  
+  color: #000;
+  border: 2px solid #000;
+  outline: none;
+  background: #f9f6f3;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background: transparent url("../img/sprite.png") no-repeat 268px -29px;
+}
+
+.login-form input.icon-password {
+  background: transparent url("../img/sprite.png") no-repeat 268px -76px;
+}
+
+.login-form .restore {
+  float: right;
+  margin-top: 4px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+  padding-right: 12px;
+}
+
+.login-form input[type="checkbox"] {
+  display: none;
+}
+
+.login-form input[type="checkbox"]+label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.login-form input[type="checkbox"]+label:hover {
+  color: #663d15;
+}
+
+.login-form input[type="checkbox"]+label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+}
+
+.login-form input[type="checkbox"]:checked+label::before {
+  background: transparent url("../img/sprite.png") no-repeat 2px -127px;
+}
+
+::-webkit-input-placeholder {color:#000;}
+::-moz-placeholder          {color:#000;}
+:-ms-input-placeholder      {color:#000;}
